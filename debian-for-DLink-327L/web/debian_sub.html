@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<link rel="stylesheet" type="text/css" href="/web/css/style.css">
+<link rel="stylesheet" type="text/css" href="/web/css/button_style.css">
+<link rel="stylesheet" type="text/css" href="/web/css/application.css">
+
+<!-- jQuery lib -->
+<script type="text/javascript" src="./jquery.js?v=1.6.1"></script>
+
+<!-- jScrollPane
+<link type="text/css" href="./jquery.jscrollpane.css?v=2.0.0" rel="stylesheet" media="all">
+<link type="text/css" href="./jquery.jscrollpane.custom.css?v=2.0.0" rel="stylesheet" media="all">
+<script type="text/javascript" src="./jquery.mousewheel.js?v=2.0.0"></script>
+<script type="text/javascript" src="./jquery.jscrollpane.js?v=2.0.0"></script>
+-->
+<script>
+var sys_time = (new Date()).getTime();
+document.write("<script language=\"javascript\" src=\"\/web\/function\/function.js?id="+sys_time+"\"><\/script>");
+document.write("<script language=\"javascript\" src=\"\/web\/function\/init.js?id="+sys_time+"\"><\/script>");
+document.write("<script language=\"javascript\" src=\"\/web\/function\/web_security.js?id="+sys_time+"\"><\/script>");
+document.write("<script language=\"javascript\" src=\".\/debian.js?id="+sys_time+"\"><\/script>");
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+    get_debian_info();
+    //check_button();
+
+//  jScrollPane_resize("#my_scroll");
+// $('#my_scroll').jScrollPane({showArrows:true, scrollbarWidth: 15, arrowSize: 16});
+
+   $("#But_Launch_IF").click(function(){
+
+      //if($("#But_Launch_IF").hasClass("button_medium"))
+         goto_url();
+   })
+});
+</script>
+</head>
+<body>
+<FORM name="form1" id="form1" action="#" method=POST>
+
+<div class="osX">
+   <div id="my_scroll">
+
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+         <tr id="id_debian_icon">
+            <td>
+               <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                  <tr>
+                     <td width="16"><div class="arrow_down" id="debian_icon"></div></td>
+                     <td><div class="accordion_title">Debian for DLink</div></td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr><td><hr></td></tr>
+         <tr id="id_debian_data" class="enable">
+            <td>
+                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="95%">
+                    <tr>
+                     <td colspan="2" height="10">
+                        <p class="p_text">Debian for DLINK was done by 8ohmh and vterdohleb@dlink</p>
+                        <p class="p_text">Debian for DLink contains an almost full Debian distro for this DLink NAS, full upgrade- and update-able. Missing due Hardware is the X11 Server/Graphics output but can be by implemented by buying an USB Graphics Card/adapter</p>
+                        <p class="p_text">How to use:</p>
+                        <p class="p_text">1. Make sure that SSH is enabled by Admin Page -> Management -> Network Management -> SSH<p class="p_text">
+                        <p class="p_text">2. For Windows, download OpenSSH and Putty, and install it, then read how to use it to connect to this NAS</p>
+                        <p class="p_text">3. For Linux, just install <i>ssh</i> by <i>apt-get install sshd</i> and login into this NAS</p>
+                        <p class="p_text">4. The Debian Linux starts automatically and does so far not intefere much with the original NAS Linux.</p>
+                        <p class="p_text">5. On command line do <i>sh /chroot2debian.sh</i></p>
+                        <p class="p_text">6. To use it at best, install by apt-get install <i>mc</i> (Midnite Commander),<i>screen</i> and the same addons provided by DLINK</p>
+                     </td>
+                  </tr>
+                   <tr><td colspan="2" height="10">&nbsp;</td></tr>
+                   <tr>
+                     <td colspan="2">
+                        <table cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="300"  border="0">
+                        <tr>
+                           <td height="22" width="100">Installation Date</td>
+                           <td height="22"><div id="my_date"></td>
+                        </tr>
+                        <tr>
+                           <td height="22" width="100">Version</td>
+                           <td height="22"><div id="my_version"></td>
+                        </tr>
+                        <tr>
+                           <td height="22" width="100">Installation Path</td>
+                           <td height="22"><div id="my_path"></td>
+                        </tr>
+                        </table>
+                     </td>
+                  </tr>
+                  <tr><td colspan="2" height="10">&nbsp;</td></tr>
+                     <tr id="chamber1" style="display">
+                     <td>
+<!--                       <div id="But_Launch_IF" class="button_medium">Launch Interface</div> -->
+                     </td>
+                     <td>&nbsp;</td>
+                   </tr>
+                  </table>
+            </td>
+         </tr>
+      </table>
+
+   </div><!-- end of my_scroll -->
+</div><!-- end of osX -->
+
+</form>
+</body>
+</html>

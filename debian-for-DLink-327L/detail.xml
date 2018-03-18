@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <apkg>
+    <item>
+      <show>debian</show>
+      <name>debian</name>
+      <category>Operating systems</category>
+      <description></description>
+      <version>Version: 1.00</version>
+      <update>Update: 2018/03/20</update>
+      <size>Size: 14.14 MB</size>
+      <developer>8ohmh,vterdohleb</developer>
+      <website></website>
+      <forum></forum>
+      <platform></platform>
+      <screenshot>debian_s.png</screenshot>
+    </item>
+  </apkg>
+</config>

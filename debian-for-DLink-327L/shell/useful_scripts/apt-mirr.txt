@@ -1,0 +1,71 @@
+APT-MIRROR(1)                                   User Contributed Perl Documentation                                   APT-MIRROR(1)
+
+NAME
+       apt-mirror - apt sources mirroring tool
+
+SYNOPSIS
+       apt-mirror [configfile]
+
+DESCRIPTION
+       A small and efficient tool that lets you mirror a part of or the whole Debian GNU/Linux distribution or any other apt
+       sources.
+
+       Main features:
+        * It uses a config similar to APT's sources.list
+        * It's fully pool compliant
+        * It supports multithreaded downloading
+        * It supports multiple architectures at the same time
+        * It can automatically remove unneeded files
+        * It works well on an overloaded Internet connection
+        * It never produces an inconsistent mirror including while mirroring
+        * It works on all POSIX compliant systems with Perl and wget
+
+COMMENTS
+       apt-mirror uses /etc/apt/mirror.list as a configuration file.  By default it is tuned to official Debian or Ubuntu mirrors.
+       Change it for your needs.
+
+       After you setup the configuration file you may run as root:
+
+           # su - apt-mirror -c apt-mirror
+
+       Or uncomment the line in /etc/cron.d/apt-mirror to enable daily mirror updates.
+
+FILES
+       /etc/apt/mirror.list
+               Main configuration file
+
+       /etc/cron.d/apt-mirror
+               Cron configuration template
+
+       /var/spool/apt-mirror/mirror
+               Mirror places here
+
+       /var/spool/apt-mirror/skel
+               Place for temporarily downloaded indexes
+
+       /var/spool/apt-mirror/var
+               Log files placed here. URLs and MD5 checksums also here.
+
+CONFIGURATION EXAMPLES
+       The mirror.list configuration supports many options, the file is well commented explaining each option.  Here are some
+       sample mirror configuration lines showing the various supported ways:
+
+       Normal: deb http://example.com/debian stable main contrib non-free
+
+       Arch Specific: (many other architectures are supported) deb-powerpc http://example.com/debian stable main contrib non-free
+
+       HTTP and FTP Auth or non-standard port: deb http://user:pass@example.com:8080/debian stable main contrib non-free
+
+       HTTPS with sending Basic HTTP authentication information (plaintext username and password) for all requests: (this was
+       default behaviour of Wget 1.10.2 and prior and is needed for some servers with new version of Wget) set auth_no_challenge 1
+       deb https://user:pass@example.com:443/debian stable main contrib non-free
+
+       HTTPS without checking certificate: set no_check_certificate 1 deb https://example.com:443/debian stable main contrib non-
+       free
+
+       Source Mirroring: deb-src http://example.com/debian stable main contrib non-free
+
+AUTHORS
+       Dmitry N. Hramtsov <hdn@nsu.ru> Brandon Holtsclaw <me@brandonholtsclaw.com>
+
+perl v5.24.1                                                 2017-05-29                                               APT-MIRROR(1)

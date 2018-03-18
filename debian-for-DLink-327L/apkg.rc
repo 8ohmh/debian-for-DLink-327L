@@ -1,0 +1,20 @@
+Product:			327
+Package:			debian
+Version:       		1.00
+Packager:			8ohmh
+Email:				mail@8ohmh.de
+Homepage:       	www.8ohmh.de
+AddonShowName: 		debian
+Description:    	Debian for DLINK
+AddonIndexPage: 	NULL
+AddonUsedPort:    
+InstDepend:
+InstConflict:             
+StartDepend:       
+StartConflict:
+Category:       	
+Developer:      	8ohmh, vterdohleb
+Website:        	https://www.debian.com
+Forum:          
+Platform:       
+Screenshot:     	debian_s.png
