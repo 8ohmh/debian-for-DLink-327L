@@ -1,8 +1,8 @@
-The Debian Free Software Guidelines (DFSG)
+The 8ohmhs modified Debian Free Software Guidelines (DFSG)
 
     Free Redistribution
 
-    The license of a Debian component may not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license may not require a royalty or other fee for such sale.
+    The license of a Debian component may not restrict any party from giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license may not require a royalty or other fee for such sale.
 
     Source Code
 
@@ -22,7 +22,7 @@ The Debian Free Software Guidelines (DFSG)
 
     No Discrimination Against Fields of Endeavor
 
-    The license must not restrict anyone from making use of the program in a specific field of endeavor. For example, it may not restrict the program from being used in a business, or from being used for genetic research.
+    The license must not restrict anyone from making use of the program in a specific field of endeavor, except animal and human testing therefore it is not allowd to use it for that in medical and pharmaceutical research endeavours which do that stuff 
 
     Distribution of License
 
